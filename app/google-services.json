@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "277001425046",
+    "project_id": "archlight-wolf",
+    "storage_bucket": "archlight-wolf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277001425046:android:9cfde47cd11007ab0bb2b7",
+        "android_client_info": {
+          "package_name": "com.setinbox.gam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "277001425046-mjmhr224e3rlfag2atrn88r4vb5hqld0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALO-0whm6SQIyyAP8t1xe19tziFAjvyRo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "277001425046-mjmhr224e3rlfag2atrn88r4vb5hqld0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
