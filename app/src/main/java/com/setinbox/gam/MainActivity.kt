@@ -25,31 +25,24 @@ class MainActivity : AppCompatActivity() {
         val prefs = getSharedPreferences("ActivityPREF", MODE_PRIVATE)
 
         if (prefs.getBoolean("activity_exec", false)) {
-            Intent(this, HandMeInvite::class.java).also { startActivity(it) }
-            finish()
+            ffNow()
         } else {
             val exec = prefs.edit()
             exec.putBoolean("activity_exec", true)
             exec.apply()
         }
 
-    }
-    override fun onResume() {
-        super.onResume()
         aps()
 
     }
 
     fun ffNow() {
-        Intent(this, HandMeInvite::class.java)
-            .also { startActivity(it) }
+        Intent(this, HandMeInvite::class.java).also { startActivity(it) }
         finish()
     }
 
     private fun deePP() {
-        AppLinkData.fetchDeferredAppLinkData(
-            this
-        ) { appLinkData: AppLinkData? ->
+        AppLinkData.fetchDeferredAppLinkData(this) { appLinkData: AppLinkData? ->
             appLinkData?.let {
                 val params =
                     appLinkData.targetUri.pathSegments
@@ -62,14 +55,11 @@ class MainActivity : AppCompatActivity() {
                 Hawk.put(DL1, firstLink)
                 Hawk.put(DL2, secondLink)
                 Hawk.put(DL3, thirdLink)
-
                 ffNow()
-                finish()
             }
             if (appLinkData == null){
                 Log.d("FB_TEST:", "Params = null")
                 ffNow()
-                finish()
             }
         }
     }
@@ -91,16 +81,12 @@ class MainActivity : AppCompatActivity() {
                 Hawk.put(Constants.C3, three)
                 deePP()
                 ffNow()
-                finish()
             }
 
             override fun onConversionDataFail(error: String?) {
                 Log.e("LOG_TAG", "error onAttributionFailure :  $error")
-
                 deePP()
-
                 ffNow()
-                finish()
             }
 
             override fun onAppOpenAttribution(data: MutableMap<String, String>?) {

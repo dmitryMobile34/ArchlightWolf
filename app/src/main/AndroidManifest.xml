@@ -22,16 +22,13 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".WhiteProgress"
-            android:exported="false"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".handshake.HandMeInvite"
-            android:exported="false"
             android:screenOrientation="portrait" />
         <activity
             android:name=".handshake.BBRAct"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".MainActivity"
